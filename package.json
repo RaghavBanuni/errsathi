@@ -1,0 +1,43 @@
+{
+  "name": "errsathi",
+  "displayName": "ErrSathi",
+  "description": "Explains Python errors inline in Tamil, Hindi, and Telugu",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "errsathi.runFile",
+        "title": "ErrSathi: Run File & Explain Errors"
+      }
+    ],
+    "configuration": {
+      "title": "ErrSathi",
+      "properties": {
+        "errsathi.language": {
+          "type": "string",
+          "default": "Tamil",
+          "enum": [
+            "Tamil",
+            "Hindi",
+            "Telugu"
+          ],
+          "description": "Language for error explanations"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "test": "echo no tests"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0"
+  }
+}
